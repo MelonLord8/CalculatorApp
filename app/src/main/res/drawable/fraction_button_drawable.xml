@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+
+            <!--Radius of all four corners-->
+            <size
+                android:height = "51dp"
+                android:width = "51dp"/>
+
+
+            <!--Fill Color of the Button-->
+            <solid
+                android:color="#ff5c94"/>
+        </shape>
+    </item>
+    <item>
+        <vector android:height="100dp" android:viewportHeight="1000"
+            android:viewportWidth="1000" android:width="100dp">
+            <path android:fillColor="#000000"
+                android:pathData="M394.3,270.1c-1.7,0.5 -4.3,2.3 -5.7,4l-2.6,3.1 0,72.9 0,72.9 3.4,3.8 3.4,3.7 105.4,0.3c77.4,0.2 106,-0.1 108.1,-0.9 1.5,-0.6 3.9,-2.5 5.2,-4.1l2.5,-3 0,-72.9 0,-72.9 -2.7,-3c-1.7,-1.9 -4.4,-3.5 -6.8,-4 -5.3,-1.2 -205.9,-1.1 -210.2,0.1zM596.8,350.2l0.2,62.8 -97,-0 -97,-0 0,-62.3c0,-34.3 0.3,-62.7 0.7,-63 0.3,-0.4 43.9,-0.6 96.7,-0.5l96.1,0.3 0.3,62.7z" android:strokeColor="#00000000"/>
+            <path android:fillColor="#000000"
+                android:pathData="M243,498l0,6 257,-0 257,-0 0,-6 0,-6 -257,-0 -257,-0 0,6z" android:strokeColor="#00000000"/>
+            <path android:fillColor="#000000"
+                android:pathData="M394.5,566.4c-1.7,0.7 -4.3,2.8 -5.8,4.5l-2.7,3.3 0,71.5c0,70 0,71.6 2,74.8 4.3,6.9 -2.3,6.5 112,6.5 114.3,-0 107.7,0.4 112,-6.5 2,-3.2 2,-4.8 2,-74.8l0,-71.5 -2.7,-3.3c-5.3,-6.2 0.4,-5.9 -111.5,-5.9 -82.8,0.1 -102.9,0.3 -105.3,1.4zM597,646l0,63 -97,-0 -97,-0 0,-63 0,-63 97,-0 97,-0 0,63z" android:strokeColor="#00000000"/>
+        </vector>
+    </item>
+</layer-list>

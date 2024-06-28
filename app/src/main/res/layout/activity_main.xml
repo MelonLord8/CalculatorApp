@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="HardcodedText" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/MenuBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ffe8ef"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/TextArea"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        app:layout_constraintTop_toBottomOf="@+id/MenuBar"
+        tools:layout_editor_absoluteX="-16dp">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#ffe8ef"
+        android:columnCount="4"
+        android:rowCount="6">
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/number_button_icon" android:textSize="20sp"
+            android:layout_row="1" android:layout_column="0" android:text="1" android:id="@+id/oneButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/number_button_icon" android:textSize="20sp"
+            android:layout_row="1" android:layout_column="1" android:text="2" android:id="@+id/twoButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/number_button_icon" android:textSize="20sp"
+            android:layout_row="1" android:layout_column="2" android:text="3" android:id="@+id/threeButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/number_button_icon" android:textSize="20sp"
+            android:layout_row="2" android:layout_column="0" android:text="4" android:id="@+id/fourButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/number_button_icon" android:textSize="20sp"
+            android:layout_row="2" android:layout_column="1" android:text="5" android:id="@+id/fiveButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/number_button_icon" android:textSize="20sp"
+            android:layout_row="2" android:layout_column="2" android:text="6" android:id="@+id/sixButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/number_button_icon" android:textSize="20sp"
+            android:layout_row="3" android:layout_column="0" android:text="7" android:id="@+id/sevenButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/number_button_icon" android:textSize="20sp"
+            android:layout_row="3" android:layout_column="1" android:text="8" android:id="@+id/eightButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/number_button_icon" android:textSize="20sp"
+            android:layout_row="3" android:layout_column="2" android:text="9" android:id="@+id/nineButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/number_button_icon" android:textSize="20sp"
+            android:layout_row="4" android:layout_column="1" android:text="0" android:id="@+id/zeroButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/number_button_icon" android:textSize="20sp"
+            android:layout_row="4" android:layout_column="0" android:text="e" android:textAllCaps="false" android:id="@+id/eButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/number_button_icon" android:textSize="20sp"
+            android:layout_row="4" android:layout_column="2" android:text="π" android:textAllCaps="false" android:id="@+id/piButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/operator_button_icon" android:textSize="20sp"
+            android:layout_row="0" android:layout_column="1" android:text="" android:id="@+id/deleteButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/operator_button_icon" android:textSize="20sp"
+            android:layout_row="0" android:layout_column="0" android:text="C" android:id="@+id/clearButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/operator_button_icon" android:textSize="20sp"
+            android:layout_row="1" android:layout_column="3" android:text="+" android:id="@+id/addButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/operator_button_icon" android:textSize="20sp"
+            android:layout_row="2" android:layout_column="3" android:text="−" android:id="@+id/subtractButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/operator_button_icon" android:textSize="20sp"
+            android:layout_row="3" android:layout_column="3" android:text="✕" android:id="@+id/multiplyButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/operator_button_icon" android:textSize="20sp"
+            android:layout_row="4" android:layout_column="3" android:text="÷" android:id="@+id/divideButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/operator_button_icon" android:textSize="20sp"
+            android:layout_row="0" android:layout_column="2" android:text="(" android:id="@+id/openBracketButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/operator_button_icon" android:textSize="20sp"
+            android:layout_row="0" android:layout_column="3" android:text=")" android:id="@+id/closeBracketButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/operator_button_icon" android:textSize="20sp"
+            android:layout_row="5" android:layout_column="1" android:text="." android:id="@+id/decimalButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/fraction_button_drawable" android:textSize="20sp"
+            android:layout_row="5" android:layout_column="0" android:id="@+id/fractionButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/operator_button_icon" android:textSize="20sp"
+            android:layout_row="5" android:layout_column="2" android:id="@+id/powerButton"/>
+
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/operator_button_icon" android:textSize="20sp"
+            android:layout_row="5" android:layout_column="3" android:text="=" android:id="@+id/equalsButton"/>
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
