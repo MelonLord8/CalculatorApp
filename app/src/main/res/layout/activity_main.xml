@@ -70,7 +70,7 @@
         <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/number_button_icon" android:textSize="20sp"
             android:layout_row="4" android:layout_column="2" android:text="π" android:textAllCaps="false" android:id="@+id/piButton"/>
 
-        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/operator_button_icon" android:textSize="20sp"
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/delete_button_drawable" android:textSize="20sp"
             android:layout_row="0" android:layout_column="1" android:text="" android:id="@+id/deleteButton"/>
 
         <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/operator_button_icon" android:textSize="20sp"
@@ -100,8 +100,8 @@
         <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/fraction_button_drawable" android:textSize="20sp"
             android:layout_row="5" android:layout_column="0" android:id="@+id/fractionButton"/>
 
-        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/operator_button_icon" android:textSize="20sp"
-            android:layout_row="5" android:layout_column="2" android:id="@+id/powerButton"/>
+        <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/exponent_button_drawable" android:textSize="20sp"
+            android:layout_row="5" android:layout_column="2" android:id="@+id/exponenetButton"/>
 
         <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/operator_button_icon" android:textSize="20sp"
             android:layout_row="5" android:layout_column="3" android:text="=" android:id="@+id/equalsButton"/>
