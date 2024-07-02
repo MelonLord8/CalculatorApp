@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/operator_button_icon" android:id="@+id/bottomLayerExponent"/>
     <item>
-        <shape android:shape="oval">
-
-            <!--Radius of all four corners-->
-            <size
-                android:height = "51dp"
-                android:width = "51dp"/>
-
-
-            <!--Fill Color of the Button-->
-            <solid
-                android:color="#ff5c94"/>
-        </shape>
-    </item>
-    <item>
-        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+        <vector
             android:width="200dp"
             android:height="200dp"
             android:viewportWidth="1000"

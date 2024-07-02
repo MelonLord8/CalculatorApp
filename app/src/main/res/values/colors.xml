@@ -2,4 +2,17 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- colors for pink-->
+
+    <color name="pinkBack">#ffffe8ef</color>
+    <color name="pinkOperator">#ffff5c94</color>
+    <color name="pinkNumber">#ffffccdc</color>
+
+    <!-- colors for blue-->
+
+    <color name="blueBack">#ff070924</color>
+    <color name="blueNumber">#ff30464A</color>
+    <color name="blueOperator">#ff222866</color>
+    <color name="blueText">#ff587D71</color>
 </resources>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Button xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="51dp"
-    android:layout_height="51dp"
-    android:background="@drawable/number_button_icon"
-    android:layout_margin="4dp"
-    >
-</Button>

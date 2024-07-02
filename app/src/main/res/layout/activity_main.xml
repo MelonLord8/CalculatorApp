@@ -4,17 +4,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:ignore="HardcodedText" >
+    tools:ignore="HardcodedText">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/MenuBar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#ffe8ef"
+        android:background="@color/blueBack"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/changeColorButton"
+            android:layout_width="23dp"
+            android:layout_height="15dp"
+            android:background="@drawable/colour_changer_icon"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.875"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -23,15 +35,17 @@
         android:layout_width="match_parent"
         android:layout_height="225dp"
         app:layout_constraintTop_toBottomOf="@+id/MenuBar"
-        tools:layout_editor_absoluteX="-16dp">
+        tools:layout_editor_absoluteX="-16dp"
+        android:background="@color/blueText">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <GridLayout
+        android:id="@+id/ButtonArea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="#ffe8ef"
+        android:background="@color/blueBack"
         android:columnCount="4"
         android:rowCount="6">
         <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/number_button_icon" android:textSize="20sp"
@@ -101,10 +115,10 @@
             android:layout_row="5" android:layout_column="0" android:id="@+id/fractionButton"/>
 
         <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/exponent_button_drawable" android:textSize="20sp"
-            android:layout_row="5" android:layout_column="2" android:id="@+id/exponenetButton"/>
+            android:layout_row="5" android:layout_column="2" android:id="@+id/exponentButton"/>
 
         <Button android:layout_width="88dp" android:layout_height="88dp" android:layout_margin="7dp" android:background="@drawable/operator_button_icon" android:textSize="20sp"
-            android:layout_row="5" android:layout_column="3" android:text="=" android:id="@+id/equalsButton"/>
+            android:layout_row="5" android:layout_column="3" android:text="=" android:id="@+id/equalButton"/>
     </GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
