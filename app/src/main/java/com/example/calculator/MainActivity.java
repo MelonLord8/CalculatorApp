@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
@@ -28,6 +30,8 @@ public class  MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
 
+    Expression expression;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +39,7 @@ public class  MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        expression = new Expression();
 
         isBlue = true;
         numberButtonDrawable = ContextCompat.getDrawable(context, R.drawable.number_button_icon);
@@ -66,7 +71,6 @@ public class  MainActivity extends AppCompatActivity {
                 binding.multiplyButton,
                 binding.divideButton,
                 binding.decimalButton,
-                binding.clearButton,
                 binding.openBracketButton,
                 binding.closeBracketButton,
                 binding.equalButton
@@ -82,8 +86,58 @@ public class  MainActivity extends AppCompatActivity {
                 switchColor();
             }
         });
+        View.OnClickListener defaultButtonListener = new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                expression.add((String) ((Button)view).getText());
+                binding.text.setText(expression.render());
+            }
+        };
+        for (Button button:numberButtons) {
+            button.setOnClickListener(defaultButtonListener);
+        }
+        for (Button button:operatorButtons) {
+            button.setOnClickListener(defaultButtonListener);
+        }
+        binding.clearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                expression.clear();
+                binding.text.setText(expression.render());
+            }
+        });
+        binding.deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                expression.remove();
+                binding.text.setText(expression.render());
+            }
+        });
+        binding.exponentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                expression.add("^");
+                binding.text.setText(expression.render());
+            }
+        });
+        binding.equalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    setText(expression.Calculate());
+                    expression.clear();
+                } catch (Exception e) {
+                    expression.clear();
+                    binding.text.setText("SYNTAX ERROR");
+                }
+            }
+        });
     }
-
+    public void setText(String number){
+        if (number.length() > 10)
+            binding.text.setText(number.substring(0,10));
+        binding.text.setText(number);
+    }
     public void switchColor(){
         if (isBlue){
             makePink();
@@ -104,9 +158,10 @@ public class  MainActivity extends AppCompatActivity {
         }
 
         setTint(operatorButtonDrawable, R.color.pinkOperator);
-        for(int i = 0; i < 9; i++){
+        for(int i = 0; i < 8; i++){
             operatorButtons[i].setBackground(operatorButtonDrawable);
         }
+        binding.clearButton.setBackground(operatorButtonDrawable);
 
         setTint(changeColorButtonDrawable, R.color.pinkOperator);
         binding.changeColorButton.setBackground(changeColorButtonDrawable);
@@ -126,9 +181,31 @@ public class  MainActivity extends AppCompatActivity {
     }
 
     void makeBlue(){
+        String text = (String) binding.text.getText();
         recreate();
+        binding.text.setText(text);
     }
     void setTint(Drawable drawable, int id){
         DrawableCompat.setTint(drawable, ContextCompat.getColor(context, id));
+    }
+
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        // Save the text from the TextView
+        outState.putString("textViewText", binding.text.getText().toString());
+        outState.putString("expression", expression.expression);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        // Restore the text to the TextView
+        if (savedInstanceState != null) {
+            String textViewText = savedInstanceState.getString("textViewText");
+            binding.text.setText(textViewText);
+            expression.expression = savedInstanceState.getString("expression");
+        }
     }
 }
